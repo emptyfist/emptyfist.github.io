@@ -39,6 +39,21 @@ $desk-md-screen: 992px;
 $tablet-sm-screen: 767px;
 $mobile-screen: 575px;
 
+body {
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: darkgrey;
+  }
+}
+
 /*============================== 
     Basic
 ================================*/
@@ -1344,10 +1359,15 @@ a:hover, a:active{
   .item-img {
     position: relative;
     overflow: hidden;
+    box-shadow: rgb(237 237 239) 0px 0px 0px 1.6px, rgba(255, 255, 255, 0.1) -4px -4px 8px, rgba(1, 7, 19, 0.2) 4px 8px 8px;
     img {
       width: 100%;
+      transition: all 0.5s ease-in-out;
     }
     &:hover {
+      img {
+        transform: scale(1.1);
+      }
       .item-img-overlay {
         opacity: 1;
         transform: translateY(0);
@@ -1388,7 +1408,7 @@ a:hover, a:active{
     left: 5px;
     right: 5px;
     bottom: 5px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.7);
     color: #35424C;
     opacity: 0;
     transition: all .5s;
