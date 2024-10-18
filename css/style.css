@@ -234,12 +234,12 @@ a:hover, a:active {
 
 .section-title.style2:after {
   content: "";
-  width: 50px;
+  width: 100px;
   height: 2px;
-  background: rgba(0, 0, 0, 0.6);
+  background: #2196F3;
   position: absolute;
   bottom: 0;
-  left: calc(50% - 30px);
+  left: calc(50% - 50px);
 }
 .section-title.style2:before {
   content: none;
@@ -941,17 +941,12 @@ a:hover, a:active {
 ================================*/
 .about-box {
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2) inset;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2) inset;
+  -webkit-box-shadow: 0 0 0 4px #2196F3 inset;
+  box-shadow: 0 0 0 4px #2196F3 inset;
   display: block;
   margin-right: 0;
   margin-top: 0;
   position: relative;
-}
-
-.bg-extra-medium-gray .about-box, .bg-dark-gray .about-box {
-  -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2) inset;
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2) inset;
 }
 
 .porfile-photo {
@@ -981,11 +976,12 @@ a:hover, a:active {
 .skills .prog-item p {
   font-size: 14px;
   margin-bottom: 8px;
+  color: white;
 }
 .skills .prog-item .skills-progress {
   width: 100%;
-  height: 5px;
-  background: #eee;
+  height: 3px;
+  background: #555;
   border-radius: 5px;
   position: relative;
 }
@@ -994,18 +990,38 @@ a:hover, a:active {
   left: 0;
   top: 0;
   height: 100%;
-  background: #474747;
+  background: #2196F3;
   width: 10%;
   border-radius: 10px;
   transition: all 1s;
 }
+.skills .prog-item .skills-progress span:before {
+  content: "";
+  right: 0;
+  display: inline-block;
+  padding: 4px;
+  transform: translateY(-4.5px) rotate(45deg) skew(3deg, 3deg) translateX(5px);
+  bottom: 8px;
+  position: absolute;
+  border: 1px solid #2196F3;
+  border-width: 0 1px 1px 0;
+  background: #222;
+  z-index: 2;
+}
 .skills .prog-item .skills-progress span:after {
   content: attr(data-value);
   position: absolute;
-  top: -20px;
-  right: 0;
+  top: -36px;
+  right: -18px;
   font-size: 10px;
-  color: #777;
+  color: white;
+  border: 1px solid #2196F3;
+  border-radius: 4px;
+  padding: 2px 0;
+  text-align: center;
+  width: 40px;
+  height: 26px;
+  z-index: 1;
 }
 
 .bg-extra-medium-gray .skills .prog-item .skills-progress, .bg-dark-gray .skills .prog-item .skills-progress {
@@ -1252,22 +1268,24 @@ a:hover, a:active {
   font-size: 14px;
   cursor: pointer;
   border: 1px solid #d5d5d5;
+  background-color: white;
   border-radius: 30px;
   padding: 5px 20px;
   display: inline-block;
   margin-bottom: 10px;
+  transition: all 0.3s ease-out;
 }
 .portfolio .filtering span:last-child {
   margin: 0;
 }
 .portfolio .filtering span:hover {
-  border-color: #232323;
-  background: #232323;
+  border-color: #2196F3;
+  background: #2196F3;
   color: #fff;
 }
 .portfolio .filtering .active {
   border-color: #232323;
-  background: #232323;
+  background: #2196F3;
   color: #fff;
 }
 .portfolio .items {
@@ -1329,10 +1347,6 @@ a:hover, a:active {
   transition: all 0.5s;
   z-index: 2;
   transform: translateY(10px);
-}
-
-.bg-extra-medium-gray.portfolio .filtering span {
-  color: #fff;
 }
 
 /*============================== 
